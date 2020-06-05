@@ -1,0 +1,35 @@
+.padding{padding:20px 20px 0px 20px}
+.halve{width:50% !important}
+.tabs.z-depth-1{width:100%;overflow:hidden}
+.tagSelectable{cursor:pointer;font-weight:bold;margin: 0 10px;text-transform:uppercase;
+    transition:.5s;-webkit-transition:.5s;-o-transition:.5s;-moz-transition:.5s}
+.tagSelectable::before{content:'#'}
+.tags-container{margin-bottom:20px}
+input, select{margin-bottom:0px;}
+span.error-view{color:rgb(245, 86, 86); font-size:15px;margin: 0 0 10px 10px; float:right}
+.tagSelected{color:rgba(250,0,0,.5)}
+#images-dropzone{color:rgba(0,0,0,.5)!important;border:2px solid rgba(110, 110, 110, .5) !important;height:500px}
+#tagSelecter i{position: absolute;right:0;color:#ab47bc;transition: .5s;-webkit-transition:.5s;-moz-transition:.5s;cursor:pointer;webkit-touch-callout: none; -webkit-user-select:none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+#tagSelecter i:hover{color:rgb(245, 86, 86);}
+#tagDumper span{
+    cursor: pointer;
+    opacity:0;
+    background: -webkit-linear-gradient(#ab47bc, rgb(245, 86, 86));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float:left;
+    margin-left: 10px;
+    float:left;webkit-touch-callout: none; -webkit-user-select: 
+    none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; 
+}
+#tagDumper span:hover{
+    cursor: pointer;
+    background: -webkit-linear-gradient(rgb(250,0,0), #ab47bc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#tagDumper span:before{content: '#'}
+.radios p {
+    float:left;
+    margin:20px;
+}

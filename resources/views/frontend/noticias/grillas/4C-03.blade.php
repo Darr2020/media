@@ -1,0 +1,16 @@
+<section id="contenedor-grilla">
+    <div class="row">
+        <div class="col s12 m12 l4">
+        @foreach($e as $key => $el)
+            @if(in_array($key, [0,1]))
+                @component('frontend.noticias.elementos.half', ['type' => $el['type'], 'e' => $el['content']])@endcomponent
+            @endif
+        @endforeach
+        </div>
+        @if(isset($e[2]))
+        <div class="col s12 m12 l8">
+            @component('frontend.noticias.elementos.4c', ['type' => $e[2]['type'], 'e' => $e[2]['content']])@endcomponent
+        </div>
+        @endif
+    </div>
+</section>

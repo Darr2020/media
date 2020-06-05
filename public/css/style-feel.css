@@ -1,0 +1,120 @@
+.page-data{
+    width:100%;
+    margin-top:2%;
+    margin-left:2%;
+    position:relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}   
+.page-data .page-social{
+    position:absolute;
+    right:5%;
+    top:0;
+}
+
+#likeUpTM,
+#dislikeUpTM,
+#likeUp,
+#dislikeUp,
+#like,
+#dislike{
+    height:30px;
+    width:30px;
+}
+#share-button{
+    height:32px;
+    width:32px;
+}
+
+.page-data .page-social *{
+    margin-left:10px;
+    cursor:pointer;
+    font-size:1.3em;
+    transition:.5s;
+}
+
+.page-social .emotion_list {
+    float:left;
+    position:relative;
+}
+
+.page-social .emotion_list .cant{
+    font-size:0.9em;
+    font-weight:bold;
+    color:#db1e18;
+    float:left;
+    margin-bottom: 2px;
+    margin-top: 14px;
+}
+
+@media all and (max-width:767px) {
+    .page-data .page-social{
+        position:absolute;
+        right:10%;
+        bottom:-50px;
+    }
+}
+div.share{
+    float:left;
+    position:relative;
+}
+
+div.share #share-button{
+    position:absolute;
+    top:20px;
+    left:0px;
+    cursor:pointer;
+    overflow:hidden;
+    z-index:10;
+    float:right;
+}
+
+div.popover{
+    position:absolute;
+    opacity:0;
+    top:0;
+    transition:.5s;
+    left:-10px;
+    padding:0;
+    width:50px;
+    z-index:1;
+    border-radius:20px;
+}
+
+div.popover .fa {
+    background:linear-gradient(40deg, #652D90, #EE4036);
+    background:-moz-linear-gradient(40deg, #652D90, #EE4036);
+    background:-o-linear-gradient(40deg, #652D90, #EE4036);
+    background:-webkit-linear-gradient(40deg, #652D90, #EE4036);
+    margin-bottom:5px;
+    font-size:.8em;
+}
+
+div.popover .fa:not(.fa-tumblr):not(.fa-facebook):not(.fa-whatsapp){
+    color:#FFF;
+    border-radius:50%;
+    border: 2px solid #909090;
+    padding: 5px;
+    margin-left:10px;
+}
+
+div.popover .fa.fa-tumblr,
+div.popover .fa-facebook{
+    color:#FFF;
+    border-radius:50%;
+    border: 2px solid #909090;
+    padding: 5px 7.4px;
+    margin-left:10px;
+}
+
+div.popover .fa.fa-whatsapp{
+    color:#FFF;
+    border-radius:50%;
+    border: 2px solid #909090;
+    padding: 6px 6px;
+    margin-left:10px;
+}
+
+.img_selected{
+    opacity:1 !important;
+    transform:scale(1.3);
+}

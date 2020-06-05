@@ -1,0 +1,541 @@
+ul.collapsible{
+    overflow:hidden;
+    padding:0;
+    margin:0;
+    border-radius:10px;
+    background-color:transparent;
+    box-shadow: none;
+    border:0;
+}
+
+ul.collapsible li{
+    margin:10px;
+}
+
+div.collapsible-header{
+    background: linear-gradient(to right, #652D90,#EC3F39);
+    background: -webkit-linear-gradient(to right, #652D90,#EC3F39);
+    background: -o-linear-gradient(to right, #652D90,#EC3F39);
+    background: -moz-linear-gradient(to right, #652D90,#EC3F39);
+    color:#FFF;
+    font-size:1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius:10px;
+    margin:0;
+}
+
+div.collapsible-body {
+    position:relative;
+    padding:0;
+    background-color:rgba(240,240,240,.5);
+    padding:5px;
+    border-radius:10px;
+    margin-top:5px;
+}
+
+.candidatos{
+    margin:5px 5px;
+    height:50px;
+    position:relative;
+}
+
+.candidatos .position1,
+.candidatos .position2,
+.candidatos .position3{
+    float:left;
+    height:20px;
+    width:20px;
+    margin-right:10px;
+    margin-top:15px;
+    border-radius:50%;
+}
+
+.candidatos .position1{
+    background:linear-gradient(180deg, #b48811, #a2790d);
+    border-color:1px solid #b48811;
+}
+.candidatos .position2{
+    background: #8f8f8f;
+    border-color:1px solid grey;
+}
+.candidatos .position3{
+    background:rgb(190, 86, 26);
+    border: 2px solid rgb(177, 72, 11);
+}
+
+.candidatos img{
+    float:left;
+    width:50px;
+    height:50px;
+}
+#catcolor{
+    display:none;
+}
+.candidatos .info {
+    float:left;
+    width:60%;
+    height:50px;
+    margin:0;
+}
+
+.info .redirect {
+    position:absolute;
+    bottom:10%;
+    right:4%;
+    font-size:.9em;
+    cursor:pointer;
+    color:#606060;
+    text-decoration: underline;
+}
+
+.candidatos .info p{
+    margin:0;
+    padding:0;
+    line-height: 15px;
+    margin-left:5px;
+    width:300px;
+}
+
+.candidatos .info span{
+    margin:0;
+    padding:0;
+    line-height: 1px;
+}
+
+.candidatos .info span.title{
+    color: #505050;
+    font-weight:bold;
+    text-transform:capitalize;
+}
+
+.candidatos .info span.title:hover{
+    text-decoration:underline;
+}
+
+.candidatos .info span.genre{
+    color: #606060;
+    text-transform:capitalize;
+    font-size:1em;
+}
+
+.candidatos .info span.votos{
+    color: #707070;
+    text-transform:capitalize;
+    font-size:.8em;
+}
+
+button.ver{
+    background: linear-gradient(180deg, #D6DE23, #00ADEE);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    border:2px solid #00ADEE50;
+    font-size:1.2em;
+    border-radius:10px;
+    padding:10px 5px;
+    font-weight: bold;
+    transition:.5s;
+    width:40%;
+    margin-left:25%;
+}
+
+.hidden{
+    display:none;
+}
+
+div.comments{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:20px;
+    margin-left:0;
+    margin-right:0;
+    padding:0;
+}
+
+div.comments > .comment{
+    position:relative;
+    width:100%;
+    height:auto;
+    padding:5px;
+    background-color:rgba(220, 220, 220, 0.5);
+    margin:10px 10px;
+    border-radius:5px;
+    position:relative;
+}
+
+div.comments .avatar > img{
+    width:100px;
+    height:100px;
+    margin:0;
+    float:left;
+}
+
+div.comments .fecha{
+    position:absolute;
+    top:2%;
+    right:2%;
+    font-size:1.2em;
+    color:#606060;
+}
+
+div.comments .comentator{
+    font-size:1.2em;
+    color:#606060;
+}
+
+div.comments .content{
+    width:100%;
+    height:100%;
+    display:block;
+    padding:0 2px 5px 2px;
+    font-size:.9em;
+}
+
+button.ver:disabled{
+    background: linear-gradient(180deg, #606060, #404040);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    border:2px solid #404040;
+    font-size:1.2em;
+    border-radius:10px;
+    padding:10px 5px;
+    font-weight: bold;
+    transition:.5s;
+    width:40%;
+    margin-left:25%;
+}
+
+button.ver:disabled:hover{
+    border:2px solid #404040;
+}
+
+.page-title{
+    color:#000;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+    line-height: 10px;
+}
+
+.page-title img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+}
+
+.page-data{
+    width:100%;
+    margin-top:2%;
+    margin-left:2%;
+    position:relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page-data .page-tags,
+.page-data .page-labels{
+    font-size:1.8em;
+    color:#606060;
+}
+
+.page-data .page-labels .categoria{
+    padding-left:10px;
+    display:none;
+}
+
+.page-data .page-social{
+    position:absolute;
+    right:10%;
+    top:0;
+}
+
+#like,
+#dislike{
+    height:30px;
+    width:30px;
+}
+#share-button{
+    width:50px;
+    height:50px;
+}
+
+.page-data .page-tags{
+    margin-bottom:30px;
+    width:60%;
+}
+
+.page-data .page-social *{
+    margin-left:10px;
+    cursor:pointer;
+    font-size:1.3em;
+    transition:.5s;
+}
+
+.page-social .emotion_list {
+    float:left;
+    position:relative;
+}
+
+.page-social .emotion_list .cant{
+    font-size:1.5em;
+    font-weight:bold;
+    color:#db1e18;
+    float:left;
+    margin-bottom:2px;
+}
+
+@media all and (max-width:767px) {
+    .page-data .page-social{
+        position:absolute;
+        right:10%;
+        bottom:-50px;
+    }
+    .page-content{
+        margin-bottom:30px;
+    }
+}
+
+.img_selected{
+    opacity:1 !important;
+    transform:scale(1.3);
+}
+
+textarea.materialize-textarea{
+    border-bottom: 2px solid  #00ADEE;
+}
+
+textarea.materialize-textarea:focus{
+    text-shadow:0 1px 0 0 #00ADEE !important;
+}
+
+textarea.materialize-textarea + label{
+    color: #00ADEE;
+}
+
+.page-social div.share{
+    float:left;
+    position:relative;
+}
+
+div.share #share-button{
+    position:absolute;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:10;
+}
+
+div.popover{
+    position:absolute;
+    opacity:0;
+    top:0;
+    transition:.5s;
+    left:-20px;
+    padding:0;
+    width:50px;
+    z-index:1;
+    border-radius:20px;
+}
+
+div.popover .fa {
+    background:linear-gradient(40deg, #652D90, #EE4036);
+    background:-moz-linear-gradient(40deg, #652D90, #EE4036);
+    background:-o-linear-gradient(40deg, #652D90, #EE4036);
+    background:-webkit-linear-gradient(40deg, #652D90, #EE4036);
+    margin-bottom:5px;
+    font-size:.8em;
+}
+
+div.popover .fa:not(.fa-tumblr):not(.fa-facebook):not(.fa-whatsapp){
+    color:#FFF;
+    border-radius:50%;
+    border: 3px solid #909090;
+    padding: 10px;
+    margin-left:10px;
+}
+
+div.popover .fa.fa-tumblr,
+div.popover .fa-facebook{
+    color:#FFF;
+    border-radius:50%;
+    border: 3px solid #909090;
+    padding: 10px 15px;
+    margin-left:10px;
+}
+
+div.popover .fa.fa-whatsapp{
+    color:#FFF;
+    border-radius:50%;
+    border: 3px solid #909090;
+    padding: 12px 12px;
+    margin-left:10px;
+}
+
+section.interest {
+    width:90%;
+    margin-left:2%;
+}
+
+section.interest h4.title {
+    display:block;
+    font-size:2vw;
+    color:#FFF;
+    width:50%;
+    padding:10px;
+    border-radius:10px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(right, #D6DE23, #00ADEE);
+    background: -moz-linear-gradient(right, #D6DE23, #00ADEE);
+    background: -o-linear-gradient(right, #D6DE23, #00ADEE);
+    background: linear-gradient(right, #D6DE23, #00ADEE);
+}
+
+.comments h4.title {
+    display:block;
+    font-size:2vw;
+    color:#FFF;
+    width:50%;
+    padding:10px;
+    border-radius:10px;
+    text-transform: capitalize;
+    background: -webkit-linear-gradient(right, #D6DE23, #00ADEE);
+    background: -moz-linear-gradient(right, #D6DE23, #00ADEE);
+    background: -o-linear-gradient(right, #D6DE23, #00ADEE);
+    background: linear-gradient(right, #D6DE23, #00ADEE);
+}
+
+
+section.interest  .most-container{
+    position:relative;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+section.interest  .most-container:not(.last){
+    border-bottom:2px solid rgba(120,120,120,.3);
+}
+
+section.interest  .most-container span.title{
+    color:#404040;
+    text-transform: capitalize;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.2em;
+    text-align:left;
+    font-weight:bold;
+    display:block;
+}
+
+section.interest  .most-container span.desc{
+    color:#404040;
+    text-transform: capitalize;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:left;
+}
+
+section.interest .most-container img{
+    width:100%;
+    height:150px;
+    max-height:200px;
+}
+
+section.interest .most-container .categoria{
+    position:absolute;
+    bottom:5%;
+    left:35%;
+    padding-left:5px;
+    font-weight: bold;
+}
+
+section.interest .most-container .more{
+    position:absolute;
+    color:#606060;
+    bottom:5%;
+    right:0;
+    text-decoration: underline;
+}
+
+section.interest .most-container .most-nomegusta{
+    position:absolute;
+    bottom:5%;
+    right:10%;
+}
+
+section.interest .most-container .most-nomegusta .cant,
+section.interest .most-container .most-megusta .cant{
+    font-size:1.2em;
+    margin-right:5px;
+    font-weight:bold;
+    color:#db1e18;
+    float:left;
+}
+
+section.interest .most-container .most-megusta{
+    position:absolute;
+    bottom:5%;
+    right:20%;
+}
+
+section.interest .most-container .most-nomegusta img{
+    width:30px;
+    height:30px;
+}
+
+section.interest .most-container .most-megusta img{
+    width:30px;
+    height:30px;
+}
+
+@media all and (max-width:767px) {
+    section.interest h4.title {
+        font-size:5vw;
+        width:100%;
+    }
+
+    .comments h4.title {
+        font-size:5vw;
+        width:100%;
+    }
+}
+
+section.comentarios{
+    position:relative;
+    width:65%;
+    margin-left:2%;
+}
+
+section.comentarios .comment_section{
+    position:relative;
+    width:100%;
+    height:100px;
+}
+
+section.comentarios img.avatar{
+    width:100px;
+    height:auto;
+}
+
+section.comentarios .input-field{
+    width:100%;
+}
+
+@media all and (max-width:767px){
+    section.comentarios{
+        width:100%;
+    }
+
+    section.comentarios img.avatar{
+        width:10em;
+        height:auto;
+    }
+}
+
+div#new-html p{
+    font-size:1em;
+    color:#606060;
+}
+
+@media all and (max-width:500px){
+
+    section.comentarios img.avatar{
+        display:none;
+    }
+}

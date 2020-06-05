@@ -1,0 +1,29 @@
+/*================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 4.0
+	Author: PIXINVENT
+	Author URL: https://themeforest.net/user/pixinvent/portfolio
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+.fixed-social{
+    position:fixed;
+    z-index:500;
+    top:20%;
+    text-align:center;
+    right:0;
+    padding:10px 5px;
+    font-size:1.5em;
+    background-color: rgba(120,120,120,.3);
+    border-radius:10px;
+    margin-right:10px;
+}
+
+.fixed-social img {
+    width:35px;
+    height:35px;
+}

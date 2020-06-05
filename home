@@ -1,0 +1,249 @@
+@extends("layout.base")
+@section("title", "MediaMétrica")
+@section('stylesheets')
+@parent
+
+@endsection
+@section("body")
+<div class="section">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ asset("images/media/rosmery.jpg") }}">
+                    </li>
+                    <li>
+                        <img src="{{ asset("images/media/home.png") }}">
+                    </li>
+                    <li>
+                        <img src="{{ asset("images/media/omar5.jpg") }}">
+                    </li>
+                    <li>
+                        <img src="{{ asset("images/media/CAMILA_CABELLO.jpg") }}">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="autocentrado">
+    <div class="divider"></div>
+    <div id="card-reveal" class="section">
+        <div class="row">
+        @if($params['data']['categorias'] != false)
+        @if($params['rankweb'] > 5)
+        @foreach($params['data']['categorias'] as $categ)
+        @for($cont=0; $cont < $params['rankweb']; $cont++)
+        @if($categ->id == $params['data']['home'][$cont]->categoria_id)
+            <div class="col s12 m6 l4">
+                <div class="card f-sessiones">
+                    <div class="card-image">
+                        @if($params['data']['categorias'][$cont]->contcand == 0)
+                        <img width="420px" height="360px" src="{{ asset("images/media/Mcolor-01.png") }}">
+                        @else
+                         <img width="420px" height="360px" src="{{ asset("candidatos/images/".$params['data']['home'][$cont]->imgcand)}}">
+                         @endif
+                    </div>
+
+                    <div class="card-content" style="padding: 15px;">
+                        <h4 class="t-sessiones"> {{$params['data']['categorias'][$cont]->nombrecategoria}}</h4>
+                        <div class="col s12 m12 l12 votaciones">
+                            <div class="col s4 m2 l2 gradient-gold">
+                                1 
+                            </div>
+                            <div class="col s4 m2 l2">
+                                @if($params['data']['categorias'][$cont]->video == true)
+                                <iframe width="50" height="50" src="https://www.youtube.com/embed/h2CdPU1i-eI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 @elseif($params['data']['categorias'][$cont]->img == true)
+                                 <img class="i-sessiones" src="{{ asset("candidatos/images/".$params['data']['home'][$cont]->imgcand)}}">
+                                 @else
+                                 <img class="i-sessiones" src="{{ asset("images/media/Mcolor-01.png") }}">
+                                 @endif
+                            </div>
+                            <div class="col s4 m4 l4">
+                                <font class="titulotop">{{$params['data']['home'][$cont]->nombrecandidato}}</font><br>
+                                <font class="generotop">Género: {{$params['data']['home'][$cont]->generos}}</font><br>
+                                <font class="vistastop">0 vistas</font><br>
+                            </div>
+                            <div class="col s4 m4 l4 votaciones">
+                                @if($params['data']['categorias'][$cont]->audio == true)
+                                <img width="26px" height="26px" src="{{ asset("images/media/audifonomorado.png") }}">
+                                @else
+                                 <img width="26px" height="26px" src="{{ asset("images/media/audifonodisable.png") }}" disabled>
+                                 @endif
+                                @if(Session::has('usuario'))
+                                <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                @else
+                                <a class="waves-effect waves-cyan modal-trigger" href="#modal1">
+                                    <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                </a>
+                                @endif                                
+                                <font class="top-sessiones sube">{{$params['data']['home'][$cont]->puntaje_web}}</font>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 votaciones">
+                            <div class="col s2 m2 l2 gradient-silver">
+                                2 
+                            </div>
+                            <div class="col s4 m2 l2">
+                                @if($params['data']['categorias'][$cont]->video == true)
+                                <iframe width="50" height="50" src="https://www.youtube.com/embed/h2CdPU1i-eI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 @elseif($params['data']['categorias'][$cont]->img == true)
+                                 <img class="i-sessiones" src="{{ asset("candidatos/images/".$params['data']['home'][$cont]->imgcand)}}">
+                                 @else
+                                 <img class="i-sessiones" src="{{ asset("images/media/Mcolor-01.png") }}">
+                                 @endif
+                            </div>
+                            <div class="col s4 m4 l4">
+                                <font class="titulotop">{{$params['data']['home'][$cont]->nombrecandidato}}</font><br>
+                                <font class="generotop">Género: {{$params['data']['home'][$cont]->generos}}</font><br>
+                                <font class="vistastop">0 vistas</font><br>
+                            </div>
+                            <div class="col s4 m4 l4 votaciones">
+                                @if($params['data']['categorias'][$cont]->audio == true)
+                                <img width="26px" height="26px" src="{{ asset("images/media/audifonomorado.png") }}">
+                                @else
+                                 <img width="26px" height="26px" src="{{ asset("images/media/audifonodisable.png") }}" disabled>
+                                 @endif
+                                @if(Session::has('usuario'))
+                                <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                @else
+                                <a class="waves-effect waves-cyan modal-trigger" href="#modal1">
+                                    <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                </a>
+                                @endif                                
+                                <font class="top-sessiones sube">{{$params['data']['home'][$cont]->puntaje_web}}</font>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 votaciones">
+                            <div class="col s2 m2 l2 gradient-bronze">
+                                3
+                            </div>
+                            <div class="col s4 m2 l2">
+                                @if($params['data']['categorias'][$cont]->video == true)
+                                <iframe width="50" height="50" src="https://www.youtube.com/embed/h2CdPU1i-eI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 @elseif($params['data']['categorias'][$cont]->img == true)
+                                 <img class="i-sessiones" src="{{ asset("candidatos/images/".$params['data']['home'][$cont]->imgcand)}}">
+                                 @else
+                                 <img class="i-sessiones" src="{{ asset("images/media/Mcolor-01.png") }}">
+                                 @endif
+                            </div>
+                            <div class="col s4 m4 l4">
+                                <font class="titulotop">{{$params['data']['home'][$cont]->nombrecandidato}}</font><br>
+                                <font class="generotop">Género: {{$params['data']['home'][$cont]->generos}}</font><br>
+                                <font class="vistastop">0 vistas</font><br>
+                            </div>
+                            <div class="col s4 m4 l4 votaciones">
+                                @if($params['data']['categorias'][$cont]->audio == true)
+                                <img width="26px" height="26px" src="{{ asset("images/media/audifonomorado.png") }}">
+                                @else
+                                 <img width="26px" height="26px" src="{{ asset("images/media/audifonodisable.png") }}" disabled>
+                                 @endif
+                                @if(Session::has('usuario'))
+                                <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                @else
+                                <a class="waves-effect waves-cyan modal-trigger" href="#modal1">
+                                    <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                </a>
+                                @endif                                
+                                <font class="top-sessiones sube">{{$params['data']['home'][$cont]->puntaje_web}}</font>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 votaciones">
+                            <div class="cirulo col s2 m2 l2">
+                                4
+                            </div>
+                            <div class="col s4 m2 l2">
+                                @if($params['data']['categorias'][$cont]->video == true)
+                                <iframe width="50" height="50" src="https://www.youtube.com/embed/h2CdPU1i-eI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 @elseif($params['data']['categorias'][$cont]->img == true)
+                                 <img class="i-sessiones" src="{{ asset("candidatos/images/".$params['data']['home'][$cont]->imgcand)}}">
+                                 @else
+                                 <img class="i-sessiones" src="{{ asset("images/media/Mcolor-01.png") }}">
+                                 @endif
+                            </div>
+                            <div class="col s4 m4 l4">
+                                <font class="titulotop">{{$params['data']['home'][$cont]->nombrecandidato}}</font><br>
+                                <font class="generotop">Género: {{$params['data']['home'][$cont]->generos}}</font><br>
+                                <font class="vistastop">0 vistas</font><br>
+                            </div>
+                            <div class="col s4 m4 l4 votaciones">
+                                @if($params['data']['categorias'][$cont]->audio == true)
+                                <img width="26px" height="26px" src="{{ asset("images/media/audifonomorado.png") }}">
+                                @else
+                                 <img width="26px" height="26px" src="{{ asset("images/media/audifonodisable.png") }}" disabled>
+                                 @endif
+                                @if(Session::has('usuario'))
+                                <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                @else
+                                <a class="waves-effect waves-cyan modal-trigger" href="#modal1">
+                                    <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                </a>
+                                @endif                                
+                                <font class="top-sessiones sube">{{$params['data']['home'][$cont]->puntaje_web}}</font>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 votaciones">
+                            <div class="cirulo col s2 m2 l2">
+                                5
+                            </div>
+                            <div class="col s4 m2 l2">
+                                @if($params['data']['categorias'][$cont]->video == true)
+                                <iframe width="50" height="50" src="https://www.youtube.com/embed/h2CdPU1i-eI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 @elseif($params['data']['categorias'][$cont]->img == true)
+                                 <img class="i-sessiones" src="{{ asset("candidatos/images/".$params['data']['home'][0]->imgcand)}}">
+                                 @else
+                                 <img class="i-sessiones" src="{{ asset("images/media/Mcolor-01.png") }}">
+                                 @endif
+                            </div>
+                            <div class="col s4 m4 l4">
+                                <font class="titulotop">{{$params['data']['home'][0]->nombrecandidato}}</font><br>
+                                <font class="generotop">Género: {{$params['data']['home'][0]->generos}}</font><br>
+                                <font class="vistastop">0 vistas</font><br>
+                            </div>
+                            <div class="col s4 m4 l4 votaciones">
+                                @if($params['data']['categorias'][$cont]->audio == true)
+                                <img width="26px" height="26px" src="{{ asset("images/media/audifonomorado.png") }}">
+                                @else
+                                 <img width="26px" height="26px" src="{{ asset("images/media/audifonodisable.png") }}" disabled>
+                                 @endif
+                                @if(Session::has('usuario'))
+                                <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                @else
+                                <a class="waves-effect waves-cyan modal-trigger" href="#modal1">
+                                    <img width="60px" height="28px" src="{{ asset("images/votar/votar.png") }}">
+                                </a>
+                                @endif                                
+                                <font class="top-sessiones sube">{{$params['data']['home'][0]->puntaje_web}}</font>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12" style="text-align:right">
+                            <font>
+                                <a class="titulotop" href="{{url('categoria_detalle',$params['data']['categorias'][$cont]->id) }}"> Ver más </a>
+                            </font>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
+            @endfor
+            @endforeach
+
+            @else
+            <div class="col s12 m12 l12">
+                <h4 style="text-align: center">No hay Candidatos registrados...</h4>
+            </div>
+            @endif
+            
+            @else
+            <h4 style="text-align: center">No hay Categorias Activas, Contacte con el Administrador Web</h4>
+            @endif
+        </div>
+    </div>    
+</div>
+@endsection
+@section('javascripts')
+@parent
+@endsection

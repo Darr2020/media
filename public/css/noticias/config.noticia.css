@@ -1,0 +1,129 @@
+.col h4, .col h5{
+    text-align:center;
+}
+
+div.modal{
+    height:auto !important;
+    max-height:90% !important;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.card-body {
+    padding:20px;
+}
+.card-body .grilla img{
+    text-align:center;
+}
+.grilla{
+    transition:.5s;
+    padding:10px;
+    border:2px solid white;
+    border-radius:10px;
+    cursor:pointer;
+    text-align:center;
+    margin:20px;
+}
+.grilla img{
+    width:30vw;
+}
+.grilla:hover{
+    border:2px solid rgb(230,110,80);
+    transform: scale(1.1);
+    background-color:rgba(230,110,80,.5);
+}
+div.posiciones{
+    text-align:center;
+    position:relative;
+    width:100%;
+}
+div.posiciones div.row div.col{
+    margin:0 !important;
+    padding:0;
+}
+div.single{
+    text-transform:uppercase;
+    font-weight:bold;
+    padding: 10px 20px;
+    border-radius:20px;
+    border:5px solid purple;
+    text-align:center;
+    margin:10px;
+}
+div.single .position{
+    width:20%;
+    color:purple;
+    margin-left:40%;
+    margin-top:0;
+    border-radius:50%;
+    padding:5px 10px;
+    font-size:2em;
+}
+div.single img{
+    width:150px;
+    height:auto;
+}
+.hidden{
+    display:none;
+}
+.modal-heading{
+    padding:20px;
+}
+img.pickable-image {
+    width:15vw;
+    height:auto;
+    padding:5px;
+    margin: 5px 5px;
+    transition:.5s;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+img.pickable-image:hover {
+    transform:scale(1.1);
+    box-shadow:rgba(0,0,0,.5) 0 0 10px;
+}
+label.upper {
+    text-transform:uppercase;
+    color:#000;
+    font-weight:bold;
+}
+span.alert{
+    display:block;
+    padding:5px;
+    color: rgb(230,110,80);
+    background-color: rgba(230,110,80,.3);
+    border-radius:5px;
+}
+.tabs.z-depth-1{width:100%;overflow:hidden}
+.third{width:50% !important}
+.full{width:100% !important}
+.tab-target{
+    margin:0 !important;
+    padding:0 !important;
+    width:100% !important;
+}
+img.picture{
+    width:120px;
+    height:60px;
+    margin:5px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.5s;
+}
+img.picture.selected{
+    transform:translate(-5px, -5px);
+    box-shadow:rgba(0,0,0,.5) 0 0 5px;
+    padding:5px;
+}
+img.picture:hover{
+    opacity:.5;
+}
+.revert{
+    color:purple;
+    font-weight:bold;
+    cursor:pointer;
+    text-transform:uppercase;
+}
