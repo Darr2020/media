@@ -4,12 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Session;
+use Spatie\Image\Image;
+
 use DB;
 use App\Models\CmGustos;
 
-class Principal extends Model {
+class Principal extends Model{
 
     public $table = "encuesta_tlf";
+
 
     public static function menu() {
 
@@ -46,19 +49,36 @@ class Principal extends Model {
                 ->whereRaw('banner.estatus = ?', 1)
                 ->orderBy('banner.posicion_id', 'asc')
                 ->get();
+    
+        return $consulta;
+
+        
+
+        //Intervention
+        /*$consulta= Image::resize(1280, null, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        });
+        
 
         if (!sizeof($consulta) == 0) {
 
-            foreach ($consulta as $frontend) {
+           
+           
+
+            foreach ($consult as $frontend) {
 
                 $params[] = $frontend;
+                
             }
 
             return $params;
         }
 
-        return false;
+        return false;*/
+        
     }
+
 
     public static function extarerHomePrincipal() {
 
